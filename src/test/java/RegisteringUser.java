@@ -97,8 +97,8 @@ public class RegisteringUser {
         /* Inputting Gender with checking for male gender option*/
         WebElement inputField = driver.findElement(By.id("usernamereg-freeformGender"));
         WebElement gender = driver.findElement(By.className("reg-gender-list"));
-        List<WebElement> options = gender.findElements(By.xpath("//li[contains(text(),'Male')]"));
-        for (WebElement option : options){
+        List<WebElement> options = gender.findElements(By.xpath("//ul[@id='reg-gender-list']"));
+        for (WebElement option : options) {
             if (option.getText().equals("Male")){
             }
             inputField.sendKeys("Male");
