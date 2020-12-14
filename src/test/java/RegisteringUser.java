@@ -24,6 +24,8 @@ public class RegisteringUser {
         driver.get("https://login.yahoo.com/account/create");
     }
 
+
+
     @Test
     public void registerTest() {
         WebElement firstnameInput = driver.findElement(By.cssSelector("#usernamereg-firstName"));
@@ -41,12 +43,13 @@ public class RegisteringUser {
 
 
 
+
         /* Inputting password */
 
 
-        WebElement password = driver.findElement(By.id("usernamereg-password"));
-        password.sendKeys("testtest123");
-        password.click();
+        WebElement passwordInput = driver.findElement(By.id("usernamereg-password"));
+        passwordInput.sendKeys("testtest123");
+        passwordInput.click();
         WebElement visiblePassword = driver.findElement(By.id("usernamereg-show-button"));
         /* Visible Password */
         try {
